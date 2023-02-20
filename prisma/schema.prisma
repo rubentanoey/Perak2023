@@ -13,10 +13,18 @@ datasource db {
 model Game {
     id               String @id @default(cuid())
     name             String
-    paymentInfo      String
     registerationFee Int
 
+    paymentInfos    PaymentType[]
     registeredUsers Registration[]
+}
+
+model PaymentType {
+    id     String @id @default(cuid())
+    name   String
+    number String
+
+    game Game[]
 }
 
 model UserType {
