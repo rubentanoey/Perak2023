@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base  {
+  @font-face {
+    font-family: 'Magic Retro';
+    src: url('/../public/MagicRetro.ttf') format('truetype');
+  }
+}
