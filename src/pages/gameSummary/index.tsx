@@ -89,7 +89,15 @@ const GameClosure: NextPage = () => {
                 <div className="font-medium  text-background-light text-sm flex flex-wrap w-[400px]">
                   {regs?.contactInfo}
                 </div>
-              </div>           
+              </div>   
+              <button className="hover:shadow-lg hover:shadow-green-500/30 mt-8 text-background-light w-[500px] h-[40px] rounded-lg bg-[#188C58]" >
+                <Link href= {{
+                    pathname:"/gameRegister",
+                    
+                }}>
+                    Daftar Games Lain
+                </Link>
+              </button>        
             </div>
             <div className="relative">
               <img src="HomepageReg4.png" alt="star" />

@@ -62,7 +62,7 @@ const Content: React.FC = () => {
     const createRegistrant = api.auth.register.useMutation({
         onSuccess: () => {
             alert("Registrant created!");
-            window.location.href = "/gameClosure?name=" + name + "&npm=" + npm + "&userType=" + typeId + "&gameId=" + data2.id;
+            window.location.href = "/gameSummary?name=" + name + "&npm=" + npm + "&userType=" + typeId + "&gameId=" + data2.id;
         }, 
         onError: (error) => {
             alert(error);
