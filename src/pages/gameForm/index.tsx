@@ -10,7 +10,7 @@ import { Header } from "../../components/Header";
 import { prisma } from "../../server/db";
 
 
-const GameForm: NextPage = () => {
+const GameSummary: NextPage = () => {
   const { data: games } = api.game.getGames.useQuery();
   const router = useRouter();
   const data2 = router.query;
@@ -180,4 +180,4 @@ const Content: React.FC = () => {
     )
 };
 
-export default GameForm;
+export default GameSummary;

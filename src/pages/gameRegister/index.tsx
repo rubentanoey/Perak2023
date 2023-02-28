@@ -34,7 +34,7 @@ const GameRegister: NextPage = () => {
                     <li key={game.id}>
                       <div className="flex bg-purple justify-center items-center outline outline-6 outline-purple-light h-[120px] w-[240px] rounded-lg">
                         <Link className="text-background-light text-2xl tracking-wider font-custom drop-shadow-[4px_4px_rgba(0,0,0,1)" href= {{
-                          pathname:"/gameForm",
+                          pathname:"/gameSummary",
                           query: game
                         }}>
                           {game.name}

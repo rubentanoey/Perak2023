@@ -18,7 +18,7 @@ const GameClosure: NextPage = () => {
   var user = "";
   if (data2.userType == "U1")
     user = "Mahasiswa";
-    else user = "Staf / Dosen";
+  else user = "Staf / Dosen";
 
   return (
     <>
