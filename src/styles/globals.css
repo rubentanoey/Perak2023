@@ -4,9 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base  {
-  @font-face {
-    font-family: 'Magic Retro';
-    src: url('/../public/MagicRetro.ttf') format('truetype');
-  }
+@font-face {
+font-family: 'Custom';
+src: url('MagicRetro.ttf') format('truetype');
 }

@@ -28,7 +28,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
-        decorative: ['Magic Retro', 'sans-serif'],
+        custom: ['Custom', 'serif'],
       },
     },
   },
