@@ -3,4 +3,8 @@
     "window.zoomLevel": 0,
     "terminal.integrated.fontSize": 12.5,
     "workbench.colorTheme": "FireFly Pro",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
