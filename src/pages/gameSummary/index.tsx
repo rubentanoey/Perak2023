@@ -20,6 +20,20 @@ const GameSummary: NextPage = () => {
     user = "Mahasiswa";
   else user = "Staf / Dosen";
 
+  const openInfo = () => {
+    if (document.getElementById("NPM")?.classList.contains("hidden")) {
+      document.getElementById("NPM")?.classList.remove("hidden");
+      document.getElementById("Contact")?.classList.remove("hidden");
+      document.getElementById("toOpen")?.classList.add("hidden");
+      document.getElementById("toClose")?.classList.remove("hidden");
+    } else {
+      document.getElementById("NPM")?.classList.add("hidden");
+      document.getElementById("Contact")?.classList.add("hidden");
+      document.getElementById("toOpen")?.classList.remove("hidden");
+      document.getElementById("toClose")?.classList.add("hidden");
+    }
+  }
+
   return (
     <>
       <Head>
@@ -82,15 +96,35 @@ const GameSummary: NextPage = () => {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <div className="min-w-screen mt-4 font-bold  text-background-light text-sm flex flex-wrap md:w-[400px]">
+                <button onClick={openInfo} className="min-w-screen mt-4 text-background-light" >
+                  <div id="toClose" className="flex flex-row gap-2">
+                    <div>
+                      Sembunyikan Detail Informasi
+                    </div> 
+                    <svg width="12" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2.23223" y1="13.3357" x2="13.2667" y2="2.30121" stroke="#F4EFD3" stroke-width="5"/>
+                    <line x1="21.2322" y1="13.8023" x2="10.1978" y2="2.76777" stroke="#F4EFD3" stroke-width="5"/>
+                    </svg>
+                  </div>
+                  <div id="toOpen" className="hidden flex flex-row gap-2">
+                    <div>
+                      Tampilkan Detail Informasi
+                    </div> 
+                    <svg width="12" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="-2.5" x2="15.6051" y2="-2.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 4 1.00006)" stroke="#F4EFD3" stroke-width="5"/>
+                    <line y1="-2.5" x2="15.6051" y2="-2.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 23 4.06903)" stroke="#F4EFD3" stroke-width="5"/>
+                    </svg>
+                  </div>
+                </button>
+                <div id="NPM">
+                  <div className="min-w-screen font-bold  text-background-light text-sm flex flex-wrap md:w-[400px]">
                     NPM
                   </div>
                   <div className="min-w-screen font-medium  text-background-light text-sm flex flex-wrap md:w-[400px]">
                     {regs?.npm}
                   </div>
                 </div>
-                <div>
+                <div id="Contact">
                   <div className="min-w-screen font-bold  text-background-light text-sm flex flex-wrap md:w-[400px]">
                     ID Line / WhatsApp
                   </div>
